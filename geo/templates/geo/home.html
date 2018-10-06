@@ -1,11 +1,6 @@
- {% extends 'base.html' %}
-{%block content%}
 
-<form method="POST" action="{% url 'search' %}" />
-    {% csrf_token %}
 <h2>GEO API</h2>
 <p>Your ip address is <strong>{{ ip }}</strong>, and you are probably in <strong>{{ country }}</strong> right now.</p>
-<h3>Search different locations</h3>
-<input class="btn btn-primary" type="submit" value="Search" />
-    {%endblock%}
+{% load static %}
 
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">

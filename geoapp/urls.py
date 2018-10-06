@@ -7,6 +7,5 @@ import geo.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', geo.views.home, name = 'home'),
-    path('geoapp/', geo.views.search, name = 'search'),
-]
+    path('', geo.views.home, name = 'home') 
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
